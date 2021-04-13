@@ -26,13 +26,8 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-# Values
-IFS='
-'
-
-
 # Start
-[ -z "$@" ] && {
+[ -z "$*" ] && {
 	printf '%s' 'mk: missing operand' >&2
 	exit 1
 }
@@ -43,12 +38,12 @@ for item in "$@"; do
 			mkdir -p "$item"
 		;;
 		*)
-			mkdir -p "$(dirname $item)"
+			mkdir -p "$(dirname "$item")" || continue
 
-			if [ ! -d "$item" ]; then
-				:>> "$item"
-			else
-				printf '%s' "mk: cannot create '$item': '$item' exists as directory" >&2
+			if [ ! -e "$item" ]; then
+				 :>> "$item"
+			elif [ -d "$item" ]; then
+				printf '%s\n' "mk: cannot create file '$item': Directory exists" >&2
 			fi
 		;;
 	esac
