@@ -38,26 +38,18 @@ IFS='
 }
 
 for item in "$@"; do
-	for path in $(printf '%s' "$item" | tr '/' '\n'); do
-		paths="${paths:+$paths/}$path"
-
-		if [ -e "$paths" ] && [ ! -d "$paths" ]; then
-			printf '%s' "mk: cannot create '$item': '$paths' exists" >&2
-			exit 1
-		fi
-	done
-
-	paths=''
-done
-
-for item in "$@"; do
 	case "$item" in
 		*'/')
 			mkdir -p "$item"
 		;;
 		*)
 			mkdir -p "$(dirname $item)"
-			:>> "$item"
+
+			if [ ! -d "$item" ]; then
+				:>> "$item"
+			else
+				printf '%s' "mk: cannot create '$item': '$item' exists as directory" >&2
+			fi
 		;;
 	esac
 done
