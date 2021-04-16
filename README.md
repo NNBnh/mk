@@ -3,24 +3,15 @@
 <p align="center"><a href="https://github.com/NNBnh/mk/blob/main/LICENSE"><img src="https://img.shields.io/github/license/NNBnh/mk?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"></a> <img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></p>
 <p align="center"><a href="https://github.com/NNBnh/mk/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/mk/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/mk/network/members"><img src="https://img.shields.io/github/forks/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/mk/issues"><img src="https://img.shields.io/github/issues/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a></p>
 
-## About
+## 💡 About
 **SuperB MK** (a.k.a `mk`) is a *SuperB* files and folders creation tool written in [`portable sh`](https://github.com/dylanaraps/pure-sh-bible) inspired by [**Advanced New File**](https://github.com/tanrax/terminal-AdvancedNewFile).
 
-## Contents
-- [About](#about)
-- [Contents](#contents)
-- [Setup](#setup)
-  - [Dependencies](#dependencies)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-
-## Setup
-### Dependencies
+## 🚀 Setup
+### 🧾 Dependencies
 - `sh` to process
 
-### Installation
-#### Manually
+### 📥 Installation
+#### 🔧 Manually
 - Option 1: using `curl`
 
 ```sh
@@ -35,7 +26,7 @@ git clone https://github.com/NNBnh/mk.git ~/.local/share/mk
 ln -s ~/.local/share/mk/bin/mk ~/.local/bin/mk
 ```
 
-#### Package manager
+#### 📦 Package manager
 For [`bpkg`](https://github.com/bpkg/bpkg) user:
 
 ```sh
@@ -48,9 +39,9 @@ For [Basher](https://github.com/bpkg/bpkg) user:
 basher install NNBnh/mk
 ```
 
-###### If you can and want to port SuperB MK to other package managers, feel free to do so.
+> *If you can and want to port SuperB MK to other package managers, feel free to do so.*
 
-## Usage
+## ⌨️ Usage
 Run 'mk' in the terminal:
 
 ```sh
@@ -88,7 +79,7 @@ Result:
   └─ test
 ```
 
-## Credits
+## 💌 Credits
 Special thanks to:
 - [**Advanced New File**](https://github.com/tanrax/terminal-AdvancedNewFile) by [Andros Fenollosa](https://github.com/tanrax)
 
