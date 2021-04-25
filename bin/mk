@@ -28,7 +28,7 @@
 
 # Start
 [ -z "$*" ] && {
-	printf '%s' 'mk: missing operand' >&2
+	printf '%s\n' 'mk: missing operand' >&2
 	exit 1
 }
 
