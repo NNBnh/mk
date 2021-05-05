@@ -45,23 +45,27 @@ mkfile() {
 }
 
 
-# Start
+# Values
+IFS='
+'
+
 if [ -n "$*" ]; then
-	for file in "$@"; do
-		mkfile "$file"
-	done
+	FILES="$@"
 elif [ -p '/dev/stdin' ]; then
-	IFS_REAL="$IFS"
-	IFS='
-	'
-	for file in $(cat -); do
-		mkfile "$file"
-	done
-	IFS="$IFS_REAL"
+	FILES=$(cat -)
 else
 	printf '%s\n' 'mk: missing operand' >&2
+
 	exit 1
 fi
+
+
+# Start
+for file in "$FILES"; do
+	mkfile "$file"
+done
+
+[ ! -t '1' ] && printf '%s' "$FILES"
 
 
 exit 0
