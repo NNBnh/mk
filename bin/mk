@@ -26,28 +26,42 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-# Start
-[ -z "$*" ] && {
-	printf '%s\n' 'mk: missing operand' >&2
-	exit 1
-}
-
-for item in "$@"; do
-	case "$item" in
+# Funtions
+mkfile() {
+	case "$1" in
 		*'/')
-			mkdir -p "$item"
+			mkdir -p "$1"
 		;;
 		*)
-			mkdir -p "$(dirname "$item")" || continue
+			mkdir -p "$(dirname "$1")" || return
 
-			if [ ! -e "$item" ]; then
-				 :>> "$item"
-			elif [ -d "$item" ]; then
-				printf '%s\n' "mk: cannot create file '$item': Directory exists" >&2
+			if [ ! -e "$1" ]; then
+				 :>> "$1"
+			elif [ -d "$1" ]; then
+				printf '%s\n' "mk: cannot create file '$1': Directory exists" >&2
 			fi
 		;;
 	esac
-done
+}
+
+
+# Start
+if [ -n "$*" ]; then
+	for file in "$@"; do
+		mkfile "$file"
+	done
+elif [ -p '/dev/stdin' ]; then
+	IFS_REAL="$IFS"
+	IFS='
+	'
+	for file in $(cat -); do
+		mkfile "$file"
+	done
+	IFS="$IFS_REAL"
+else
+	printf '%s\n' 'mk: missing operand' >&2
+	exit 1
+fi
 
 
 exit 0
