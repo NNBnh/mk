@@ -27,6 +27,12 @@ ln -s ~/.local/share/mk/bin/mk ~/.local/bin/mk
 ```
 
 #### 📦 Package manager
+For [Arch-Linux base distro](https://archlinux.org), install [this AUR package](https://aur.archlinux.org/packages/superbmk-git):
+
+```sh
+paru -Sy superbfetch-git
+```
+
 For [`bpkg`](https://github.com/bpkg/bpkg) user:
 
 ```sh
@@ -81,6 +87,7 @@ Result:
 
 ## 💌 Credits
 Special thanks to:
+- [**Julian Marcos**](https://github.com/Juliaria08) for porting this package to the [AUR](https://aur.archlinux.org/packages/superbfetch-git)
 - [**Advanced New File**](https://github.com/tanrax/terminal-AdvancedNewFile) by [Andros Fenollosa](https://github.com/tanrax)
 
 <br><br><br><br>
