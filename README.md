@@ -1,7 +1,6 @@
 <h1 align="center"><i>MK</i></h1>
 <p align="center"><i>SuperB</i> way to create new folders and files</p>
 <p align="center"><a href="https://github.com/NNBnh/mk/blob/main/LICENSE"><img src="https://img.shields.io/github/license/NNBnh/mk?labelColor=073551&color=4EAA25&style=for-the-badge" alt="License: GPL-3.0"></a> <a href="https://gist.github.com/NNBnh/9ef453aba3efce26046e0d3119dab5a7#development-completed"><img src="https://img.shields.io/badge/development-completed-%234EAA25.svg?labelColor=073551&style=for-the-badge&logoColor=FFFFFF" alt="Development completed"></a></p>
-<p align="center"><a href="https://github.com/NNBnh/mk/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/mk/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/mk/network/members"><img src="https://img.shields.io/github/forks/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a> <a href="https://github.com/NNBnh/mk/issues"><img src="https://img.shields.io/github/issues/NNBnh/mk?labelColor=073551&color=4EAA25&style=flat-square"></a></p>
 
 ## 💡 About
 **SuperB MK** (a.k.a `mk`) is a *SuperB* files and folders creation tool written in [`portable sh`](https://github.com/dylanaraps/pure-sh-bible) inspired by [**Advanced New File**](https://github.com/tanrax/terminal-AdvancedNewFile).
