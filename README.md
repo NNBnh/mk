@@ -29,12 +29,12 @@ For [Arch-Linux base distro](https://archlinux.org), install [this AUR package](
 paru -Sy superbfetch-git
 ```
 
-For [`bpkg`](https://github.com/bpkg/bpkg) user:
+For [Bpkg](https://github.com/bpkg/bpkg) user:
 ```sh
 bpkg install NNBnh/mk
 ```
 
-For [Basher](https://github.com/bpkg/bpkg) user:
+For [Basher](https://github.com/basherpm/basher) user:
 ```sh
 basher install NNBnh/mk
 ```
